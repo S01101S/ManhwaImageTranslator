@@ -53,8 +53,8 @@ def cleanUpOCRText(text):
 
     for i in lines:
         i = re.sub(r"[^\w\s.,!?'\"-]", "", i)
-
-        lineSeparator = i.strip().replace("...", ".").replace("-.", ".").replace("/", "").replace(",", "")
+        i = i.strip()
+        lineSeparator = i.replace("...", ".").replace("-.", ".").replace("/", "").replace(",", "")
 
         wordsInLine = len(i.split())
 
@@ -64,6 +64,7 @@ def cleanUpOCRText(text):
                 cleanedLines.append(lineSeparator)
 
     cleanedText = " ".join(cleanedLines)
+    cleanedText = cleanedText.replace("'", "")
 
     if cleanedText.endswith("소리"):
         cleanedText += "?"
@@ -133,6 +134,7 @@ def checkingSpeechBubbles(image):
             try:
                 finalOCRImage = cv2.bitwise_not(croppedImage)
                 text = pytesseract.image_to_string(finalOCRImage, lang='kor', config='--psm 6').strip()
+                text = re.sub(r'\s{2,}','', text)
                 if text:
                     extractedText.append(text)
 
@@ -165,6 +167,7 @@ def checkingSpeechBubbles(image):
                 cleanedFinalTextLines.append(finalLineSeparator)
 
     finalText = "\n".join(cleanedFinalTextLines)
+    finalText = finalText.replace("'", "")
 
     
     

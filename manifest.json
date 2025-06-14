@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Manhwa Image Translator",
+  "version": "1.0.0",
+  "description": "Scans an image on the current tab and uses a local server to extract text.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "ManhwaTranslator.html",
+    "default_icon": {
+      "16": "icon-Image/icon.png",
+      "48": "icon-Image/icon.png",
+      "128": "icon-Image/icon.png"
+    }
+  },
+  "icons": {
+    "16": "icon-Image/icon.png",
+    "48": "icon-Image/icon.png",
+    "128": "icon-Image/icon.png"
+  }
+}

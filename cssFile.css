@@ -1,0 +1,112 @@
+body {
+    min-width: 350px;
+    min-height: 400px;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+    padding: 0;
+}
+
+.extension-name {
+    font-size: medium;
+    font-weight: bold;
+}
+
+.content {
+    margin-top: 60px;
+    padding: 10px;
+}
+
+button {
+    width: auto;
+    height: auto;
+    padding: 16px;
+    padding-bottom: 20px;
+    font-size: small;
+    background-color: rgb(146, 202, 251);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: none;
+    border-radius: 5%;
+}
+
+button:hover {
+    background-color: blueviolet;
+    color: white;
+    transform: scale(1, 1);
+}
+
+button:active {
+    animation: bounce 0.3s ease;
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+textarea {
+    width: 200%;
+    height: 200px;
+    margin-top: 10px;
+}
+
+
+#progressBarContainer {
+    width: 100%;
+    background-color: lightblue;
+    display: none;
+}
+
+#progressBarLoader {
+    width: 0%;
+    height: 30px;
+    background-color: blueviolet;
+    transition: width 1.0s ease-in-out;
+    text-align: center;
+    color: white;
+    line-height: 30px;
+}
+
+
+#textContainer h3{
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+
+#textContainer pre{
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    font-size: 12px;
+}

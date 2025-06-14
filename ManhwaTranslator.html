@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Manhwa Image Translator</title>
+    <link rel="stylesheet" href="cssFile.css">
+
+</head>
+
+<body>
+
+    <div class="header">
+        <img src="icon-Image/icon.png" alt="Icon" class="icon">
+        <span class="extension-name">Manhwa Translator</span>
+    </div>
+
+    <div class="content">
+        
+        <button id="extract">Scan current manhwa image</button>
+
+        <br>
+        <br>
+
+
+        <div id="textContainer">
+
+            <h3 id="scannedHeader">Scanned Text</h3>
+            <pre id="originalTextFromImage"></pre>
+            <br>
+            <h3 id="translatedHeader">Translated Text</h3>
+            <pre id="translatedText"></pre>
+
+        </div>
+
+
+
+        <div id="progressBarContainer">
+            
+            <div id="progressBarLoader">
+            </div>
+
+        </div>
+
+        <div id="errorText">
+        </div>
+        
+        
+    </div>
+
+
+    <script src="popup2.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "project-tryout",
+  "version": "1.0.0",
+  "description": "",
+  "main": "popup2.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "tesseract.js": "^6.0.1"
+  }
+}

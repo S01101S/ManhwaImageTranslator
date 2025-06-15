@@ -24,6 +24,28 @@ This chrome extension was created because when a user has an image of a raw manh
 
 ## Setup/Installation of the extension
 
+- **Prerequisties:**
+    Before you begin you want to make sure that you have all the following installed on your machine:
+    - **<u>Git:</u>** For cloning the repository
+    - **<u>Node.js:</u>** This includes the `npm` for managing Node.js packages
+    - **<u>Python (3.8+ recommneded)</u>:** Image processing backend runs on python. Make sure to have Python and `pip`
+    - **<u>Tesseract</u>:**  Follow the instructions to install the correct tesseract for your operating system (https://tesseract-ocr.github.io/tessdoc/Installation.html).
+    - **<u>Tesseract languages: </u>** Make sure to install the Korean language data (`kor.traineddata`) and place it in you `tessdata` subdirectory of your Tesseract installation
+    - **<u>pip installation</u>:** These are all the pip installations needed to make the [korean speech bubble detection](server/koreanSpeechBubbleDetection.py) script to work: `pip install opencv-python pytesseract deep_translator pyspellchecker`
+
+- **Backend Setup**
+    - **Node.js dependencies:** Before running the server make sure to do `npm install` to install the necessary packages
+    - **Changing Tesseract directory:** Open up the [korean speech bubble detection](server/koreanSpeechBubbleDetection.py) python script and change the [following line](https://github.com/S01101S/ManhwaImageTranslator/blob/main/server/koreanSpeechBubbleDetection.py#L12) to point to your Tesseract directory
+
+- **Frontend setup**
+    1. Open your browser (Chrome/Brave/Edge)
+    2. Go to the Extensions Page (`chrome://extensions` for chrome/Brave) or (`edge://extensions` for Edge) and enable `Developer Mode`
+    3. After enabling `Developer Mode` click the `Load unpacked` button and navigate to where projects root directory is. After this the extension should appear in your list of extensions now
+
+- **Running the application:**
+    - Start by going to your terminal in the `server/` directory and run `node server.js`. This should output `Node.js OCR server listening on http://localhost:3000` in the terminal. 
+    - Open an image on the webpage and then open up the Manhwa Image Translator click the `Scan current manhwa image` button within the extension popup.
+    - After clicking the button it will run the whole script and print out the results on the extension's popup.
 
 
 ## Technologies Used
@@ -93,12 +115,13 @@ There are multiple phases for the backend:
 
 
 
-
-
 ## Issues
 
-| Issue | Description | Resolved | 
-| ----- | ----------- | -------- |
-
+| Issue | Description |
+| ----- | ----------- |
+| Noises for white background manhwas | The speech bubble detection will sometimes pick up specks of noise from the background which are hard to filter out using Tesseract. 
+| Translation issues | The Translation from Korean to English is not always the best where it may print the sentences a bit differently |  
+| Application to Manga | This detection does not work well with mangas due to the different artstyle |
+| Speech bubble detection Accuracy | Due to speech bubbles having complex shapes sometimes they may be picked up as noises |
 
 

@@ -11,7 +11,7 @@
 |[Frontend Description](#frontend-description)|
 |[Backend Description](#backend-description)|
 |[Issues](#issues)|
-
+|[License](#license)|
 
 
 ## About the project
@@ -111,10 +111,6 @@ There are multiple phases for the backend:
 > **NOTE:** This backend server runs entirely on the user's local machine. No image data is ever uploaded to a remote server.
 
 
-
-
-
-
 ## Issues
 
 | Issue | Description |
@@ -124,4 +120,7 @@ There are multiple phases for the backend:
 | Application to Manga | This detection does not work well with mangas due to the different artstyle |
 | Speech bubble detection Accuracy | Due to speech bubbles having complex shapes sometimes they may be picked up as noises |
 
+
+## License
+MIT. See [LICENSE](license.md)
 

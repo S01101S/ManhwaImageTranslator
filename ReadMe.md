@@ -11,6 +11,7 @@
 |[Frontend Description](#frontend-description)|
 |[Backend Description](#backend-description)|
 |[Issues](#issues)|
+|[Contribution](#contributing)|
 |[License](#license)|
 
 
@@ -119,6 +120,14 @@ There are multiple phases for the backend:
 | Translation issues | The Translation from Korean to English is not always the best where it may print the sentences a bit differently |  
 | Application to Manga | This detection does not work well with mangas due to the different artstyle |
 | Speech bubble detection Accuracy | Due to speech bubbles having complex shapes sometimes they may be picked up as noises |
+
+
+## Contributing
+
+1. Fork the repo
+2. git checkout -b feature/idea
+3. Make changes + commit: git commit -am "idea"
+4. Push: git push origin feature/idea
 
 
 ## License

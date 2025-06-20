@@ -24,7 +24,7 @@ This chrome extension was created because when a user has an image of a raw manh
 
 ## Setup/Installation of the extension
 
-- **Prerequisties:**
+- **Prerequisites:**
     Before you begin you want to make sure that you have all the following installed on your machine:
     - **<u>Git:</u>** For cloning the repository
     - **<u>Node.js:</u>** This includes the `npm` for managing Node.js packages
